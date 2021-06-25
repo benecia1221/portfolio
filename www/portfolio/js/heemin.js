@@ -1,6 +1,29 @@
-$('.txt').html(function(i, html) {
-  var chars = $.trim(html).split("");
-
-  return '<span>' + chars.join('</span><span>') + '</span>';
+$(document).ready(function(){
+  var lastScroll = 0;
+     $(window).scroll(function(event){
+          var scroll = $(this).scrollTop();
+          if (scroll > 500){
+               $("#sec1").addClass("on");
+          }
+          else {
+               $("#sec1").removeClass("on");
+          }
+          lastScroll = scroll;
+   });
+   $(window).scroll(function(event){
+        var scroll = $(this).scrollTop();
+        if (scroll > 1000){
+             $("#sec2").addClass("on");
+        }
+        else {
+             $("#sec2").removeClass("on");
+        }
+        lastScroll = scroll;
+ });
+   $(".bottom_btn a, .menu a, a[href='#pageTop']").click(function(e){
+     e.preventDefault();//e:임의의 a태그 변수지정
+     var targetPos = $($(this).attr('href')).offset().top
+     $('body,html').animate({'scrollTop':targetPos});
+   });
 
 });

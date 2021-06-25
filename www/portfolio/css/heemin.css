@@ -1,6 +1,9 @@
+h1, h2, h3, h4, h5, h6 {margin:0;}
+body{background:#090d00;}
+
 #main {
   position:relative;
-  font: 400 1em/1.5 "Neuton"; background: #090d00; color: rgba(255,255,255,.25); text-align: center; margin: 0;
+  font: 400 1em/1.5 "Neuton"; color: rgba(255,255,255,.25); text-align: center; margin: 0;
   height:100vh;
 }
 a:hover {text-decoration: none;}
@@ -59,7 +62,7 @@ a:hover {text-decoration: none;}
   }
 
 #main .menu a {
-  font-size:3.2rem;
+  font-size:3rem;
   color:#fff;
   -webkit-text-stroke-color: #fff;
   -webkit-text-stroke-width: 0.02em;
@@ -70,6 +73,7 @@ a:hover {text-decoration: none;}
   background-image: radial-gradient(circle farthest-corner at center center, #f06e2b 0%, #f06e2b 50%, transparent 50.1%);
   background-position: 50% 50%;
   background-size: 0% 0%;
+  font-family:'twaysky'
 }
 
 #main .menu a:hover {background-size: 180% 400%;-webkit-text-stroke-color: #f06a26;}
@@ -105,25 +109,103 @@ a:hover {text-decoration: none;}
 
 #main .bottom_btn a i:hover {
   padding:18px;
-  animation: icon-line 1s ease-out infinite;
 }
-
-#main .bottom_btn a i:hover i:after
-{
-  width: 100%;
-  height: 100%;
-  border: 2px solid #fff;
-  border-radius: 100%;
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%,-50%);
-  animation: icon-line 1s ease-out infinite;}
 
 #main .bottom_btn {
     position: absolute;
     bottom: 3%;
     right: 50%;
     transform: translateX(50%);
+}
+
+#sec1 {
+  padding: 30px;
+  color:#fff;
+  margin-top:70px
+}
+
+#sec1 .warp {width:100%; display:table;margin-top:50px;padding:0 20px}
+#sec1 h2 {
+  font-size:4.3rem;margin-bottom:1rem;
+  color:#fff;
+  -webkit-text-stroke-color: #fff;
+  -webkit-text-stroke-width: 0.02em;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-repeat: no-repeat;
+  transition: background-size .8s cubic-bezier(0.67, 0.01, 0.15, 0.98);
+  background-image: radial-gradient(circle farthest-corner at center center, #fff 0%, #fff 50%, transparent 50.1%);
+  background-position: 50% 50%;
+  background-size: 0% 0%;
+}
+#sec1.on h2{
+  background-size: 205% 400%;-webkit-text-stroke-color: #fff;
+}
+#sec1 h2:after {
+  content: '';
+  display:block;
+  width:0;
+  height:2px;
+  background-color:#fff;
+  transition-property: all;
+  transition-duration: 1s;
+}
+#sec1.on h2:after {
+  width:100%;
+}
+
+#sec1 h3 {font-size:2.2rem}
+#sec1 .warp .warp_left {
+  display:table-cell;
+  width:35%;
+}
+#sec1 .english_sub {display:block;margin-bottom:15px;color:#7d7d7d;font-size:1.3rem}
+#sec1 .warp ul li {font-size:1.3rem;line-height:2rem}
+#sec1 .warp .intro {margin-bottom:60px;}
+#sec1 .warp .license li {line-height:3rem}
+
+#sec1 .warp .skills {display:table-cell;vertical-align:top;padding:20px;width:45%}
+#sec1 .warp .skills .english_sub {margin-bottom:50px}
+#sec1 .warp .skills li {margin-bottom:1rem}
+#sec1 .warp .skills .skill_per {
+  display:inline-block;width:0;height:20px;background-color:#ddd; transition-property: all;
+  transition-duration: 1.5s;
+}
+#sec1.on .skills .ability1List1 .skill_per {width:400px;}
+#sec1.on .skills .ability1List2 .skill_per {width:425px;}
+#sec1.on .skills .ability1List3 .skill_per {width:325px;}
+#sec1.on .skills .ability1List4 .skill_per {width:450px;}
+
+#sec1 .me {display:table-cell;vertical-align: middle;}
+#sec1 .img {width:300px;height:600px;background-color:#fff}
+#sec1.on .img {}
+
+#sec2 {margin-top:80px}
+#sec2 h2 {
+  font-size:4.3rem;margin-bottom:1rem;
+  color:#fff;
+  -webkit-text-stroke-color: #fff;
+  -webkit-text-stroke-width: 0.02em;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-repeat: no-repeat;
+  transition: background-size .8s cubic-bezier(0.67, 0.01, 0.15, 0.98);
+  background-image: radial-gradient(circle farthest-corner at center center, #fff 0%, #fff 50%, transparent 50.1%);
+  background-position: 50% 50%;
+  background-size: 0% 0%;
+}
+#sec2.on h2{
+  background-size: 205% 400%;-webkit-text-stroke-color: #fff;
+}
+#sec2 h2:after {
+  content: '';
+  display:block;
+  width:0;
+  height:2px;
+  background-color:#fff;
+  transition-property: all;
+  transition-duration: 1s;
+}
+#sec2.on h2:after {
+  width:100%;
 }
