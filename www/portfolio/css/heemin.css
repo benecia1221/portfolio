@@ -1,0 +1,129 @@
+#main {
+  position:relative;
+  font: 400 1em/1.5 "Neuton"; background: #090d00; color: rgba(255,255,255,.25); text-align: center; margin: 0;
+  height:100vh;
+}
+a:hover {text-decoration: none;}
+#main p {
+	text-transform: uppercase;
+	letter-spacing: .5em;
+	display: inline-block;
+	border: 4px double rgba(255,255,255,.25);
+	border-width: 4px 0;
+	padding: 1.5em 0em;
+	position: absolute;
+	top: 13%;
+	left: 50%;
+	width: 40em;
+	margin: 0 0 0 -20em;
+}
+#main .title {
+
+  	font:700 7.2em/1 "Oswald", sans-serif;
+  	letter-spacing: 0;
+  	padding: 0.07em 0 .185em;
+	  display: block;
+	  margin: 0 auto;
+  	text-shadow: 0 0 80px rgba(255,255,255,.5);
+
+/* Clip Background Image */
+
+	  background: url(https://i.ibb.co/RDTnNrT/animated-text-fill.png) repeat-y;
+	  -webkit-background-clip: text;
+	  background-clip: text;
+
+/* Animate Background Image */
+
+	  -webkit-text-fill-color: transparent;
+	  -webkit-animation: aitf 80s linear infinite;
+
+/* Activate hardware acceleration for smoother animations */
+
+	  -webkit-transform: translate3d(0,0,0);
+	  -webkit-backface-visibility: hidden;
+
+  }
+
+/* Animate Background Image */
+
+@-webkit-keyframes aitf {
+	0% { background-position: 0% 50%; }
+	100% { background-position: 100% 50%; }
+}
+
+#main .menu {
+    position: absolute;
+    top: 54%;
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+#main .menu a {
+  font-size:3.2rem;
+  color:#fff;
+  -webkit-text-stroke-color: #fff;
+  -webkit-text-stroke-width: 0.02em;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-repeat: no-repeat;
+  transition: background-size .5s cubic-bezier(0.67, 0.01, 0.15, 0.98);
+  background-image: radial-gradient(circle farthest-corner at center center, #f06e2b 0%, #f06e2b 50%, transparent 50.1%);
+  background-position: 50% 50%;
+  background-size: 0% 0%;
+}
+
+#main .menu a:hover {background-size: 180% 400%;-webkit-text-stroke-color: #f06a26;}
+
+#main .menu a:after {
+  display: block;
+  content: '';
+  width: 0;
+  height: 2px;
+  background-color: #f06a26;
+  margin-top: 2px;
+  transition-property: all;
+  transition-duration: .5s;
+}
+
+#main .menu a:hover:after {
+  width:100%;
+}
+#main .bottom_btn a{
+  cursor:pointer;
+}
+
+#main .bottom_btn a i {
+  color:#fff;
+  font-size:2rem;
+  background-color:transparent;
+  border-radius:100%;
+  padding:13px;
+  border:1px solid #fff;
+  transition: .3s ease;
+  position: relative;
+}
+
+#main .bottom_btn a i:hover {
+  padding:18px;
+  animation: icon-line 1s ease-out infinite;
+}
+
+#main .bottom_btn a i:hover i:after
+{
+  width: 100%;
+  height: 100%;
+  border: 2px solid #fff;
+  border-radius: 100%;
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  animation: icon-line 1s ease-out infinite;}
+
+#main .bottom_btn {
+    position: absolute;
+    bottom: 3%;
+    right: 50%;
+    transform: translateX(50%);
+}
