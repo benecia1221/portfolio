@@ -35,4 +35,13 @@ $(document).ready(function(){
     $('body,html').animate({'scrollTop':targetPos});
   });
 
+  $(".planning_back .noteLink1").click(function(){
+    $(".planning_note").fadeIn();
+    $(".planning_noteImg.note1").fadeIn();
+    return false;
+  });
+
+  $(".planning_note .close_button").click(function(){
+    $(".planning_note").fadeOut();
+  });
 });
