@@ -12,7 +12,7 @@ $(document).ready(function(){
    });
    $(window).scroll(function(event){
         var scroll = $(this).scrollTop();
-        if (scroll > 1000){
+        if (scroll > 1300){
              $("#sec2").addClass("on");
         }
         else {
@@ -25,5 +25,14 @@ $(document).ready(function(){
      var targetPos = $($(this).attr('href')).offset().top
      $('body,html').animate({'scrollTop':targetPos});
    });
+   $(".option").click(function(){
+    $(".option").removeClass("active");
+    $(this).addClass("active");
+  });
+  $(".bottom_btn a, .menu a, a[href='#pageTop']").click(function(e){
+    e.preventDefault();//e:임의의 a태그 변수지정
+    var targetPos = $($(this).attr('href')).offset().top
+    $('body,html').animate({'scrollTop':targetPos});
+  });
 
 });
