@@ -23,7 +23,7 @@ $(document).ready(function(){
 
     $(window).scroll(function(event){
          var scroll = $(this).scrollTop();
-         if (scroll > 2700){
+         if (scroll > 3200){
               $("#sec3").addClass("on");
          }
          else {
@@ -31,6 +31,16 @@ $(document).ready(function(){
          }
          lastScroll = scroll;
      });
+     $(window).scroll(function(event){
+          var scroll = $(this).scrollTop();
+          if (scroll > 4200){
+               $("#sec4").addClass("on");
+          }
+          else {
+               $("#sec4").removeClass("on");
+          }
+          lastScroll = scroll;
+      });
 
    $(".bottom_btn a, .menu a, a[href='#pageTop']").click(function(e){
      e.preventDefault();//e:임의의 a태그 변수지정
@@ -94,8 +104,10 @@ $(document).ready(function(){
   $("#slider").slick({
     slide:'div',
     infinite:true,
-    slidesToShow : 4, 
+    slidesToShow : 4,
     slidesToScroll:1,
+    draggable : true,
+    pauseOnHover : false,
     speed:100,
     arrows:true,
     autoplay : true,
