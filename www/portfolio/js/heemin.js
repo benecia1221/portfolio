@@ -4,12 +4,15 @@ $(document).ready(function(){
           var scroll = $(this).scrollTop();
           if (scroll > 500){
                $("#sec1").addClass("on");
+               $("#quick").addClass("on");
           }
           else {
                $("#sec1").removeClass("on");
+               $("#quick").removeClass("on");
           }
           lastScroll = scroll;
    });
+
    $(window).scroll(function(event){
         var scroll = $(this).scrollTop();
         if (scroll > 1300){
@@ -31,9 +34,10 @@ $(document).ready(function(){
          }
          lastScroll = scroll;
      });
+
      $(window).scroll(function(event){
           var scroll = $(this).scrollTop();
-          if (scroll > 4200){
+          if (scroll > 4300){
                $("#sec4").addClass("on");
           }
           else {
@@ -42,20 +46,18 @@ $(document).ready(function(){
           lastScroll = scroll;
       });
 
-   $(".bottom_btn a, .menu a, a[href='#pageTop']").click(function(e){
-     e.preventDefault();//e:임의의 a태그 변수지정
+   $(".bottom_btn a, .menu a, .top_btn a, a[href='#pageTop']").click(function(e){
+     e.preventDefault();
      var targetPos = $($(this).attr('href')).offset().top
      $('body,html').animate({'scrollTop':targetPos});
    });
+
    $(".option").click(function(){
     $(".option").removeClass("active");
     $(this).addClass("active");
   });
-  $(".bottom_btn a, .menu a, a[href='#pageTop']").click(function(e){
-    e.preventDefault();//e:임의의 a태그 변수지정
-    var targetPos = $($(this).attr('href')).offset().top
-    $('body,html').animate({'scrollTop':targetPos});
-  });
+
+
 
   $(".planning_back .noteLink1").click(function(){
     $(".planning_note").fadeIn();
@@ -94,8 +96,6 @@ $(document).ready(function(){
   });
 
 
-
-
   $(".planning_note .close_button").click(function(){
     $(".planning_note").fadeOut();
     $(".planning_noteImg").fadeOut();
@@ -109,9 +109,23 @@ $(document).ready(function(){
     draggable : true,
     pauseOnHover : false,
     speed:100,
-    arrows:true,
+    arrows:false,
     autoplay : true,
-  })
+  });
+
+  $(".interview dt").click(function(){
+    $(this).toggleClass('show').siblings().removeClass("show");
+  });
+
+
+  $("#quick .quick_click").click(function(){
+    $(".quick_note").fadeIn();
+  });
+
+  $("#quick .xi-close").click(function(e){
+    e.stopPropagation();
+    $("#quick .quick_note").fadeOut();
+  });
 
 
 });

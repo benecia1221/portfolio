@@ -162,7 +162,8 @@ a:hover {text-decoration: none;}
 }
 #sec1 .english_sub {display:block;margin-bottom:15px;color:#7d7d7d;font-size:1.3rem}
 #sec1 .warp ul li {font-size:1.3rem;line-height:2rem}
-#sec1 .warp .intro {margin-bottom:60px;}
+#sec1 .warp .intro, #sec1 .warp .license {margin-bottom:50px;}
+
 #sec1 .warp .license li {line-height:3rem;width:60%}
 #sec1 .warp .license li span:nth-child(2) {float:right;font-size:1rem}
 
@@ -181,9 +182,19 @@ a:hover {text-decoration: none;}
 
 #sec1 .me {display:table-cell;vertical-align: middle;}
 #sec1 .me_img img {width:450px;}
-
-
-
+#sec2 .options .option.active:after {display:none}
+#sec2 .options .option:after {
+  content:'';
+  display:block;
+  height:100%;
+  width:100%;
+}
+#sec2 .options .option1:after {background-color:#ffe4e4}
+#sec2 .options .option2:after {background-color:#f1cfba}
+#sec2 .options .option3:after {background-color:#f1e8ba}
+#sec2 .options .option4:after {background-color:#baf1db}
+#sec2 .options .option5:after {background-color:#d1f0ff}
+#sec2 .options .option6:after {background-color:#e9ceff}
 
 
 #sec2 {margin-top:150px;padding:30px;color:#fff}
@@ -416,12 +427,25 @@ a:hover {text-decoration: none;}
   background-color:rgba(0,0,0,0.7);
   width:100%;height:100%;
 }
-#sec2 .options .option .slide_link a {display:none}
-#sec2 .options .option.active:hover .slide_link a {
+#sec2 .options .option .slide_icon {
   position:absolute;
-  display:block;
   top:50%;left:50%;
   transform:translate(-50%,-50%);
+}
+#sec2 .options .option .slide_icon .slide_icons {
+  margin-top:1rem;
+  font-size:2.3rem;
+  text-align:center;
+}
+#sec2 .options .option .slide_icon .slide_icons img {
+  width: 2.1rem;
+  vertical-align: top;
+  margin-top: .6rem;
+}
+}
+#sec2 .options .option .slide_link a {display:none}
+#sec2 .options .option.active:hover .slide_link a {
+  display:block;
   background-color:#222;
   font-size: 1.5rem;
   color: #fff;
@@ -593,7 +617,7 @@ transition-duration: 1s;
   margin-top:.5rem
 }
 #sec3 .introduce div {display:table-cell;width:50%;padding-bottom:4rem}
-#sec3 .introduce p {font-size:1.2rem}
+#sec3 .introduce p {font-size:1.2rem;line-height: 2.2rem;}
 
 
 
@@ -642,7 +666,7 @@ transition-duration: 1s;
   display:block;
   width:0%; height:2px;
   background-color:#fff;
-  transition-property: all;
+  transition-property: width;
   transition-duration: 1s
 }
 #sec4 .interview .xi-message {display:none}
@@ -655,3 +679,45 @@ transition-duration: 1s;
 #sec4 .interview .show strong {font-weight:bold}
 #sec4 .interview .show .xi-message-o {display:none}
 #sec4 .interview .show .xi-message {display:inline-block}
+
+#sec4 .interview dt:hover:after {background-color:#f06a26}
+
+#quick {
+  opacity: 0;
+  position:fixed; bottom:3%; right:2%;
+  font-size:1rem;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  padding: 10px;
+  text-align:center;
+  background-color:#1c1c1c;
+  transition: all 0.8s;
+}
+#quick.on {opacity: 1;}
+#quick .quick_list li:hover {color:#f06a26}
+#quick .quick_list i {font-size:3rem; cursor:pointer;}
+#quick .quick_list span {display:block; margin-bottom:1rem}
+#quick .quick_note {
+  display:none;
+  position:fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.8);
+}
+#quick .quick_note img {
+  position:absolute;
+  top:50%; left:50%;
+  transform:translate(-50%,-50%)
+}
+#quick .quick_note .xi-close {
+  position:absolute;
+  top:8%;right:13%;
+  transition: all ease 1s;
+  font-size: 4rem;
+  color:#fff;
+}
+#quick .quick_note .xi-close:hover {
+  transform: rotate( 270deg )
+}
