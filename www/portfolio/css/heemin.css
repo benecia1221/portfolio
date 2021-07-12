@@ -264,6 +264,14 @@ a:hover {text-decoration: none;}
   width: calc(100% - 100px);
   height: 500px;
 }
+#sec2 .slideShow .option a {
+  display:none;
+}
+
+#sec2 .slideShow .option.active a {
+  display:block;
+}
+
 @media screen and (max-width: 718px) {
   #sec2 .options {
     min-width: 520px;

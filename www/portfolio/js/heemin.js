@@ -46,7 +46,7 @@ $(document).ready(function(){
           lastScroll = scroll;
       });
 
-   $(".bottom_btn a, .menu a, .top_btn a, a[href='#pageTop']").click(function(e){
+   $(".bottom_btn a, .top_btn a, .menu a, .top_btn a, a[href='#pageTop']").click(function(e){
      e.preventDefault();
      var targetPos = $($(this).attr('href')).offset().top
      $('body,html').animate({'scrollTop':targetPos});
@@ -55,6 +55,7 @@ $(document).ready(function(){
    $(".option").click(function(){
     $(".option").removeClass("active");
     $(this).addClass("active");
+    return false;
   });
 
 
