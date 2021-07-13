@@ -127,8 +127,10 @@ $(document).ready(function(){
     e.stopPropagation();
     $("#quick .quick_note").fadeOut();
   });
-
-
+  
+  $("#sec2 .options .option .slide_icon a").click(function(e){
+     e.stopPropagation(); //부모의 클릭을 무시해라.
+  });
 });
 // <![CDATA[
 var colour="random";
